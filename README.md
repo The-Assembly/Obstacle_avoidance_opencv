@@ -194,6 +194,8 @@ sudo apt-get install python-opencv
 - or try redoing all the above mentioned steps.
 
 ## Circuit Assembly
+![opencv_obstacle_avoid_bb](https://user-images.githubusercontent.com/32713072/44152058-6c95e9a6-a0b5-11e8-88ed-b0a5be95332e.jpg)
+
 
 
 ## Coding and Software implementation
@@ -205,7 +207,7 @@ This project uses the the bilateral filter to remove noise from the frame captur
 An empty matrix is created to store the coordinates of the edges.A for loop is used to go through every row at intervals of 5 and a nested for loop is used to determine the height of the edge at every row.Once the coordinates for all the edges are obtained,a line is drawn connecting all the heights of the edges and from the bottom of every row.
 
 ### Dividing the frame into chunks
-The dimensions of the entire frame is 640 by 480.Therefore,if the edges are obtained from the rows at every 5 intervals,a total of 128 edges coordinates are expected to be obtained.The first to step to decide which direction the rover should move to avoid an obstacle is to divide the frame into chunks.If the frame is divided into three chunks,approximately 42 different edge coordinates are expected to be obtained in each chunk.The average edge coordinates is obtained from each chunk and a line is drawn from the midpoint of the frame towards each chunk.If an obstacle is detected at the center chunk,the longest line drawn towards the chunk at the sides will be considered and rover will decide on which direction to move by following the longest line.
+The dimensions of the entire frame is 640 by 480.Therefore,if the edges are obtained from the rows at every 5 intervals,a total of 128 edge coordinates are expected to be obtained.The first to step to decide which direction the rover should move to avoid an obstacle is to divide the frame into chunks.If the frame is divided into three chunks,approximately 42 different edge coordinates are expected to be obtained in each chunk.The average edge coordinates is obtained from each chunk and a line is drawn from the midpoint of the frame towards the chunks.If an obstacle is detected at the center chunk,the longest line drawn towards the chunk at the sides will be considered and rover will decide on which direction to move by following the longest line.
 
 
 
