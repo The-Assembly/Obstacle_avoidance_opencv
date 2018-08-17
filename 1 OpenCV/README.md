@@ -1,3 +1,6 @@
+## ADD images  
+## Add codes
+
 ### Remove noise and detect edges
 This project uses the the bilateral filter to remove noise from the frame captured by the webcam.There are four parameters that needs to be entered to apply this filter and these parameters include the source image,filter size,sigma space and colour.After removing the noise,the Canny function is applied to detect the edges from the image.There are three parameters that needs to be entered to apply this function and these parameters include the source image,minVal and maxVal.Minval is the first and lower threshold to detect the edge while Maxval represents the upper and maximum threshold.
 
